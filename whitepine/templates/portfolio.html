@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block pg-class %}content portfolio{% endblock %}
+
+{% block portfolio_cls %}active{% endblock %}
+
+{% block ribbon-content %}
+  <ul class="albums">
+    <li>
+      <a href="#">
+        <img src="{{ STATIC_URL }}img/placeholder.gif" />
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="{{ STATIC_URL }}img/placeholder.gif" />
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="{{ STATIC_URL }}img/placeholder.gif" />
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="{{ STATIC_URL }}img/placeholder.gif" />
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="{{ STATIC_URL }}img/placeholder.gif" />
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="{{ STATIC_URL }}img/placeholder.gif" />
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="{{ STATIC_URL }}img/placeholder.gif" />
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="{{ STATIC_URL }}img/placeholder.gif" />
+      </a>
+    </li>
+  </ul>
+{% endblock %}
+
+{% block canvas %}
+  <div class="slide-ctrls">
+    <a href="#" class="prev" title="Previous"></a>
+    <a href="#" class="next" title="Next"></a>
+  </div>
+  <img src="{{ STATIC_URL }}img/sample2.jpg" />
+{% endblock %}

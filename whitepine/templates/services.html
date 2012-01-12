@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block pg-class %}services{% endblock %}
+
+{% block services_cls %}active{% endblock %}
+
+{% block ribbon-content %}
+  <ul class="service-menu">
+    <li><a href="javascript:void(0);" id="fs-menu">Feng Shui</a></li>
+    <li><a href="javascript:void(0);" id="f-menu">Furniture</a></li>
+    <li><a href="javascript:void(0);" id="u-menu">Upholstery</a></li>
+    <li><a href="javascript:void(0);" id="w-menu">Wall Hangings</a></li>
+  </ul>
+{% endblock %}
+
+{% block canvas %}
+  <div class="overlay">
+    <div class="service" id="fs-content">
+      <h2>Feng Shui</h2>
+      <p>
+        Historically, feng shui was widely used to orient buildings—often spiritually significant structures such as
+        tombs, but also dwellings and other structures—in an auspicious manner. Depending on the particular style of
+        feng shui being used, an auspicious site could be determined by reference to local features such as bodies of
+        water, stars, or a compass. Feng shui was suppressed in China during the cultural revolution in the 1960s, but
+        has since seen an increase in popularity, particularly in the United States.
+      </p>
+    </div>
+    <div class="service" id="f-content">
+      <h2>Furniture</h2>
+      <p>
+        The first three-quarters of the twentieth century are often seen as the march towards Modernism. Art Deco, De
+        Stijl, Bauhaus, Wiener Werkstätte, and Vienna Secession designers all worked to some degree within the Modernist
+        idiom. Born from the Bauhaus and Art Deco/Streamline styles came the post WWII "Mid-Century Modern" style using
+        materials developed during the war including lamenated plywood, plastics and fiberglass. Prime examples include
+        furniture designed by George Nelson Associates, Charles and Ray Eames, Paul McCobb, Florence Knoll, Harry
+        Bertoia, Eero Saarinen, Harvey Probber, Vladamir Kagan, Finn Juhl, Arne Jacobsen, and others. Postmodern design,
+        intersecting the Pop art movement, gained steam in the 1960s and 70s, promoted in the 80s by groups such as the
+        Italy-based Memphis movement. Transitional furniture is intended to fill a place between Traditional and Modern
+        tastes.
+      </p>
+    </div>
+    <div class="service" id="u-content">
+      <h2>Upholstery</h2>
+      <p>
+        Upholstery is the work of providing furniture, especially seats, with padding, springs, webbing, and fabric or
+        leather covers. The word upholstery comes from the Middle English words up and holden, meaning to hold up. The
+        term is applied to domestic furniture and also to automobiles, airplanes and boats. A person who works with
+        upholstery is called an upholsterer; an apprentice upholsterer is sometimes called an outsider or trimmer.
+        Traditional upholstery uses old methods and materials, coil springs (post-1850), animal hair (horse, hog & cow),
+        coir, straw and hay, hessians, linen scrims, wadding, etc., and is done by hand, building each layer up.
+      </p>
+    </div>
+    <div class="service" id="w-content">
+      <h2>Wall Hangings</h2>
+      <p>
+        Different muralists tend to become experts in their preferred medium and application, whether that be oil
+        paints, emulsion or acrylic paints applied by brush, roller or airbrush/aerosols. Clients will often ask for a
+        particular style and the artist may adjust to the appropriate technique.
+      </p>
+      <p>
+        A consultation usually leads to a detailed design and layout of the proposed mural with a price quote that the
+        client approves before the muralist starts on the work. The area to be painted can be gridded to match the
+        design allowing the image to be scaled accurately step by step. In some cases the design is projected straight
+        onto the wall and traced with pencil before painting begins. Some muralists will paint directly without any
+        prior sketching, preferring the spontaneous technique.
+      </p>
+      <p>
+        Once completed the mural can be given coats of varnish or protective acrylic glaze to protect the work from UV
+        rays and surface damage.
+      </p>
+    </div>
+  </div>
+  <img src="{{ STATIC_URL }}img/sample3.jpg" />
+{% endblock %}
+
+{% block bottom-scripts %}
+  {{ block.super }}
+  <script type="text/javascript">
+    $(function () {
+      $(".service-menu a").bind("click", function () {
+        $(".service").hide();
+        var id = $(this).attr("id");
+        var sub = id.substring(0,id.indexOf("-menu"));
+        var content = sub + "-content";
+        $("#" + content).show();
+      }).first().trigger("click");
+    });
+  </script>
+{% endblock %}
