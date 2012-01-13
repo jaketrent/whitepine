@@ -138,8 +138,11 @@ footer ul li {
 }
 
 /*** portfolio ***/
+#disp-photo {
+  width: 100%;
+}
 .albums {
-  padding: 20px;
+  padding: 0;
   overflow: auto;
   position: absolute;
   bottom: 0;
