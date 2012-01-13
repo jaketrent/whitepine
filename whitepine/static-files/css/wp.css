@@ -1,0 +1,197 @@
+@font-face {
+	/* This declaration targets Internet Explorer */
+	font-family: 'Telegrafico';
+	src: url('../type/telegrafico-webfont.eot');
+}
+@font-face {
+	/* This declaration targets everything else */
+	font-family: 'Telegrafico';
+	src: url(//:) format('no404'), url('../type/telegrafico-webfont.woff') format('woff'), url('../type/telegrafico-webfont.ttf') format('truetype'), url('../type/telegrafico-webfont.svg#webfont4u05kPhw') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+article, section, aside, hgroup, nav, header, footer, figure, figcaption {
+  display: block;
+}
+ul, ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  /*background: #3a4234;
+  background: -moz-linear-gradient(top, #070801 1%, #3A4234 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#070801), color-stop(100%,#3A4234));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070801', endColorstr='#3A4234',GradientType=0 );
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;*/
+  background: url(../img/bg.png) repeat-x top #3a4234;
+
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+nav {
+  overflow: auto;
+  padding: 45px 0px 10px 0px;
+  overflow: auto;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+nav ul li {
+  float: right;
+  margin-left: 8px;
+}
+nav ul li:before {
+  content: " / ";
+}
+nav ul li:last-child:before {
+  content: "";
+}
+nav ul li a.active {
+  color: #992034;
+}
+.ribbon {
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  width: 230px;
+  height: 575px;
+  z-index: 1;
+  text-align: center;
+  -webkit-box-shadow: 3px 3px 3px #000000;
+  -moz-box-shadow: 3px 3px 3px #000000;
+  box-shadow: 3px 3px 3px #000000;
+  background: #4a111a; /* old browsers */
+  background: -moz-linear-gradient(top, #5F1622 0%, #4A111A 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5F1622), color-stop(100%,#4A111A)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5F1622', endColorstr='#4A111A',GradientType=0 ); /* ie */
+}
+header hgroup {
+  margin-top: 385px;
+  padding-top: 86px;
+  height: 0px;
+  overflow: hidden;
+  background: url(../img/title.png) no-repeat center;
+}
+.canvas {
+  position: relative;
+  z-index: 0;
+  border: 1px solid #fff;
+  height: 575px;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 3px #000000;
+  -moz-box-shadow: 3px 3px 3px #000000;
+  box-shadow: 3px 3px 3px #000000;
+}
+footer {
+  font-size: 10px;
+  overflow: auto;
+  margin-top: 10px;
+}
+footer p {
+  float: left;
+  margin: 0px;
+}
+footer ul li {
+  float: right;
+  margin-left: 6px;
+}
+
+/*** content ***/
+.content hgroup {
+  margin-top: 35px;
+  padding-top: 29px;
+  background: url(../img/title-content.png) no-repeat center;
+}
+.overlay {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 496px;
+  height: 395px;
+  background: rgba(0,0,0,.6);
+  display: block;
+  padding: 30px;
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*** portfolio ***/
+.albums {
+  padding: 20px;
+  overflow: auto;
+}
+.albums li {
+  float: left;
+}
+.albums img {
+  height: 75px;
+  width: 75px;
+  margin: 10px;
+}
+.slide-ctrls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-shadow: 2px 2px 2px #000;
+  filter: dropshadow(color=#000, offx=2, offy=2);
+}
+.slide-ctrls a {
+  margin: 5px;
+  font-size: 16px;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+	border-bottom: 16px solid transparent;
+  display: inline-block;
+}
+.slide-ctrls .prev {
+  border-right: 32px solid #fff;
+}
+.slide-ctrls .next {
+  border-left: 32px solid #fff;
+
+}
+
+
+/*** services ***/
+.service-menu {
+  position: absolute;
+  right: 20px;
+  top: 160px;
+  list-style: none;
+}
+.service-menu li {
+  display: block;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.service-menu li a {
+  font-size: 14px;
+  text-align: right;
+  display: block;
+  color: #faf8ba;
+  text-decoration: none;
+  padding-left: 15px;
+}
+.service-menu li a:hover:before {
+  content: "\2192\00a0";
+}
+.service {
+  display: none;
+}
