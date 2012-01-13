@@ -4,55 +4,58 @@
 
 {% block portfolio_cls %}active{% endblock %}
 
-{% block ribbon-content %}
-  <ul class="albums">
-    <li>
-      <a href="#">
-        <img src="{{ STATIC_URL }}img/placeholder.gif" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="{{ STATIC_URL }}img/placeholder.gif" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="{{ STATIC_URL }}img/placeholder.gif" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="{{ STATIC_URL }}img/placeholder.gif" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="{{ STATIC_URL }}img/placeholder.gif" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="{{ STATIC_URL }}img/placeholder.gif" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="{{ STATIC_URL }}img/placeholder.gif" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="{{ STATIC_URL }}img/placeholder.gif" />
-      </a>
-    </li>
-  </ul>
-{% endblock %}
+{% block ribbon-class %}small{% endblock %}
 
 {% block canvas %}
-  <div class="slide-ctrls">
-    <a href="#" class="prev" title="Previous"></a>
-    <a href="#" class="next" title="Next"></a>
-  </div>
   <img src="{{ STATIC_URL }}img/sample2.jpg" />
+  {% block galleries %}
+    <ul class="albums">
+      <li class="slider">
+        <a href="#" class="prev" title="Previous"></a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="{{ STATIC_URL }}img/placeholder.gif" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="{{ STATIC_URL }}img/placeholder.gif" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="{{ STATIC_URL }}img/placeholder.gif" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="{{ STATIC_URL }}img/placeholder.gif" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="{{ STATIC_URL }}img/placeholder.gif" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="{{ STATIC_URL }}img/placeholder.gif" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="{{ STATIC_URL }}img/placeholder.gif" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="{{ STATIC_URL }}img/placeholder.gif" />
+        </a>
+      </li>
+      <li class="slider">
+        <a href="#" class="next" title="Next"></a>
+      </li>
+    </ul>
+  {% endblock %}
 {% endblock %}

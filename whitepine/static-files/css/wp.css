@@ -80,12 +80,18 @@ nav ul li a.active {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5F1622), color-stop(100%,#4A111A)); /* webkit */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5F1622', endColorstr='#4A111A',GradientType=0 ); /* ie */
 }
+.ribbon.small {
+  height: 95px;
+}
 header hgroup {
   margin-top: 385px;
   padding-top: 86px;
   height: 0px;
   overflow: hidden;
   background: url(../img/title.png) no-repeat center;
+}
+.ribbon.small header hgroup {
+  margin-top: 32px;
 }
 .canvas {
   position: relative;
@@ -135,36 +141,43 @@ footer ul li {
 .albums {
   padding: 20px;
   overflow: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .6);
+  display: block;
+  width: 100%;
+}
+.albums.minimized {
+
 }
 .albums li {
   float: left;
 }
 .albums img {
-  height: 75px;
-  width: 75px;
-  margin: 10px;
+  height: 72px;
+  width: 72px;
+  margin: 9px;
 }
-.slide-ctrls {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  text-shadow: 2px 2px 2px #000;
-  filter: dropshadow(color=#000, offx=2, offy=2);
+.albums li.slider {
+  width: 30px;
+  display: none;
 }
-.slide-ctrls a {
-  margin: 5px;
+.albums li.slider a {
+  margin: 9px;
   font-size: 16px;
   width: 0;
   height: 0;
-  border-top: 16px solid transparent;
-	border-bottom: 16px solid transparent;
-  display: inline-block;
+  border-top: 36px solid transparent;
+	border-bottom: 36px solid transparent;
+  display: block;
+
 }
-.slide-ctrls .prev {
-  border-right: 32px solid #fff;
+.slider .prev {
+  border-right: 10px solid #fff;
 }
-.slide-ctrls .next {
-  border-left: 32px solid #fff;
+.slider .next {
+  border-left: 10px solid #fff;
 
 }
 
