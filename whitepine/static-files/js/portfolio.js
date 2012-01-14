@@ -6,12 +6,14 @@ var DisplayView = Backbone.View.extend({
   },
   initialize: function () {
     _.bindAll(this);
+    this.$('.arrow').hide();
     Backbone.Events.bind('photosDisplay', this.renderPhotos);
   },
   renderPhotos: function (photos) {
     this.photos = photos;
     this.index = 0;
     $(this.el).children('.disp-photo').remove();
+    this.$('.arrow').show();
     var template = _.template($('#photo-display').html());
     var frag = document.createDocumentFragment();
     _(photos).each(function (photo) {
