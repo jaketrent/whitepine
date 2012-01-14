@@ -70,8 +70,8 @@ var AlbumView = Backbone.View.extend({
   initialize: function () {
     _.bindAll(this);
   },
-  render: function () {
-    $(this.el).html('<img src="' + this.model.get('cover') + '" />');
+  render: function (template) {
+    $(this.el).html(template(this.model.toJSON()));
     return this;
   }
 });
@@ -91,11 +91,12 @@ var AlbumSliderView = Backbone.View.extend({
   renderAlbums: function () {
     var albumView = null;
     var frag = document.createDocumentFragment();
+    var liTemplate = _.template($('#album-li').html());
     _(this.collection.models).each(function (album) {
       albumView = new AlbumView({
         model: album
       });
-      frag.appendChild(albumView.render().el);
+      frag.appendChild(albumView.render(liTemplate).el);
     });
     $(this.el).html(frag);
   }
