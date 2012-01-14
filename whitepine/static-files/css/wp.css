@@ -181,7 +181,18 @@ footer ul li {
 }
 .slider .next {
   border-left: 10px solid #fff;
-
+}
+#album-slider {
+  height: 72px;
+  width: 72px;
+  margin: 9px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .6) url(../img/albums.png) no-repeat center center;
+  overflow: hidden;
+  text-indent: -999em;
+  display: block;
 }
 
 
