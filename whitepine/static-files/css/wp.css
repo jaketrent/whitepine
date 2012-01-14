@@ -68,7 +68,7 @@ nav ul li a.active {
   top: 0px;
   left: 70px;
   width: 230px;
-  height: 575px;
+  height: 665px;
   z-index: 1;
   text-align: center;
   -webkit-box-shadow: 3px 3px 3px #000000;
@@ -83,7 +83,7 @@ nav ul li a.active {
   height: 95px;
 }
 header hgroup {
-  margin-top: 385px;
+  margin-top: 470px;
   padding-top: 86px;
   height: 0px;
   overflow: hidden;
