@@ -62,7 +62,7 @@ nav ul li:last-child:before {
   content: "";
 }
 nav ul li a.active {
-  color: #992034;
+  color: #c42945;
 }
 .ribbon {
   position: absolute;
