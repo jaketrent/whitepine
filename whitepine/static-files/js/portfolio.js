@@ -140,10 +140,16 @@ var AlbumSliderView = Backbone.View.extend({
     $(this.el).html(frag);
   },
   hideAlbums: function () {
-    $(this.el).hide();
+    $(this.el).animate({
+      left: 1024,
+      opacity: 0
+    });
   },
   showAlbums: function () {
-    $(this.el).show();
+    $(this.el).animate({
+      left: 0,
+      opacity: 1
+    });
   }
 
 });
