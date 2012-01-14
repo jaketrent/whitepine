@@ -6,10 +6,19 @@
 
 {% block ribbon-class %}small{% endblock %}
 
+{% block bottom-scripts %}
+  {{ block.super }}
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/underscore-min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/backbone-min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/portfolio.js"></script>
+{% endblock %}
+
 {% block canvas %}
+  <div id="display"></div>
   <img src="{{ STATIC_URL }}img/sample2.jpg" id="disp-photo"/>
   {% block galleries %}
-    <ul class="albums"></ul>
+    <ul id="albums"></ul>
     <a href="#" class="arrow left">Back</a>
     <a href="#" class="arrow right">Forward</a>
     <a href="#" id="album-slider">Show albums</a>

@@ -140,7 +140,7 @@ footer ul li {
 #disp-photo {
   width: 100%;
 }
-.albums {
+#albums {
   padding: 0;
   overflow: auto;
   position: absolute;
@@ -150,22 +150,19 @@ footer ul li {
   display: block;
   width: 100%;
 }
-.albums.minimized {
-
-}
-.albums li {
+#albums li {
   float: left;
 }
-.albums img {
+#albums img {
   height: 72px;
   width: 72px;
   margin: 9px;
 }
-.albums li.slider {
+#albums li.slider {
   width: 30px;
   display: none;
 }
-.albums li.slider a {
+#albums li.slider a {
   margin: 9px;
   font-size: 16px;
   width: 0;
