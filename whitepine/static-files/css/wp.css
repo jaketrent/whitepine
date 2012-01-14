@@ -37,10 +37,9 @@ body {
   -o-background-size: 100%;
   background-size: 100%;*/
   background: url(../img/bg.png) repeat-x top #3a4234;
-
 }
 .container {
-  width: 960px;
+  width: 1024px;
   margin: 0 auto;
   position: relative;
 }
@@ -193,6 +192,23 @@ footer ul li {
   overflow: hidden;
   text-indent: -999em;
   display: block;
+}
+.arrow {
+  display: block;
+  height: 50px;
+  width: 60px;
+  position: absolute;
+  top: 250px;
+  overflow: hidden;
+  text-indent: -999em;
+}
+.arrow.left {
+  background: rgba(0, 0, 0, .6) url(../img/left.png) no-repeat center center;
+  left: 0;
+}
+.arrow.right {
+  background: rgba(0, 0, 0, .6) url(../img/right.png) no-repeat center center;
+  right: 0;
 }
 
 
