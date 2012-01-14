@@ -10,7 +10,7 @@
   {{ block.super }}
 
   <script type="text/template" id="album-li">
-    <img src="<%- cover %>" />
+    <img class="album-link" src="<%- cover %>" />
   </script>
 
   <script type="text/template" id="photo-display">
@@ -30,7 +30,8 @@
     <a href="#" class="arrow right">Forward</a>
   </div>
   {% block galleries %}
-    <ul id="albums"></ul>
-    <a href="#" id="album-slider">Show albums</a>
+    <ul id="albums">
+    </ul>
+    <a href="#" id="albums-tgl">Show albums</a>
   {% endblock %}
 {% endblock %}

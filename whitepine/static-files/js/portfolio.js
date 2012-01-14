@@ -108,6 +108,7 @@ var AlbumView = Backbone.View.extend({
   },
   showAlbum: function () {
     Backbone.Events.trigger('photosDisplay', this.model.get('photos'));
+    Backbone.Events.trigger('albumClick');
   }
 });
 
@@ -115,6 +116,9 @@ var AlbumSliderView = Backbone.View.extend({
   el: '#albums',
   initialize: function () {
     _.bindAll(this);
+    this.$('#albums-tgl').hide();
+    Backbone.Events.bind('albumClick', this.hideAlbums);
+    Backbone.Events.bind('albumTglClick', this.showAlbums);
   },
   fetchForUser: function(userId) {
     this.collection = new Albums();
@@ -134,8 +138,33 @@ var AlbumSliderView = Backbone.View.extend({
       frag.appendChild(albumView.render(liTemplate).el);
     });
     $(this.el).html(frag);
+  },
+  hideAlbums: function () {
+    $(this.el).hide();
+  },
+  showAlbums: function () {
+    $(this.el).show();
   }
 
+});
+
+var AlbumsToggleView = Backbone.View.extend({
+  el: '#albums-tgl',
+  events: {
+    'click': 'hideTgl'
+  },
+  initialize: function () {
+    _.bindAll(this);
+    Backbone.Events.bind('albumClick', this.showTgl);
+    $(this.el).hide();
+  },
+  showTgl: function () {
+    $(this.el).show();
+  },
+  hideTgl: function () {
+    $(this.el).hide();
+    Backbone.Events.trigger('albumTglClick');
+  }
 });
 
 
@@ -143,7 +172,7 @@ $(document).ready(function () {
   var displayView = new DisplayView();
   var albumSliderView = new AlbumSliderView();
   albumSliderView.fetchForUser('116342059677336243524');
-
+  new AlbumsToggleView();
 
 
 });
