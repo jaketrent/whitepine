@@ -13,6 +13,10 @@
     <img src="<%- cover %>" />
   </script>
 
+  <script type="text/template" id="photo-display">
+    <img class="disp-photo" src="<%- url %>" />
+  </script>
+
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/underscore-min.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/backbone-min.js"></script>
@@ -20,8 +24,9 @@
 {% endblock %}
 
 {% block canvas %}
-  <div id="display"></div>
-  <img src="{{ STATIC_URL }}img/sample2.jpg" id="disp-photo"/>
+  <div id="display">
+    <img class="disp-photo" src="{{ STATIC_URL }}img/sample2.jpg" />
+  </div>
   {% block galleries %}
     <ul id="albums"></ul>
     <a href="#" class="arrow left">Back</a>

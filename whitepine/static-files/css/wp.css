@@ -137,7 +137,7 @@ footer ul li {
 }
 
 /*** portfolio ***/
-#disp-photo {
+.disp-photo {
   width: 100%;
 }
 #albums {
@@ -157,6 +157,7 @@ footer ul li {
   height: 72px;
   width: 72px;
   margin: 9px;
+  cursor: pointer;
 }
 #albums li.slider {
   width: 30px;

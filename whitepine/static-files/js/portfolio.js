@@ -1,35 +1,20 @@
-var DisplayView = function () {
-  return Backbone.View.extend({
-    el: '#display',
-    initialize: function () {
-      _.bindAll(this);
-    }
-  });
-};
-
-var AlbumPhoto = Backbone.Model.extend({
-    view : null,
-
-    initialize : function() {
-        this.fetch();
-        this.bind("change", function() {
-            this.view=new AlbumView({model : this});
-            this.view.render();
-        });
-    },
-    url:function() {
-        return "http://picasaweb.google.com/data/feed/api/user/"+this.attributes.user+"/albumid/"+this.attributes.id+"?authkey="+this.attributes.authkey+"&alt=json&callback=?";
-    },
-    parse : function(response) {
-        var thumbnailTemp;
-        _.each(response.feed.entry,function(photo) {
-            thumbnailTemp=_.last(photo.media$group.media$thumbnail);
-            photo.media$group.media$thumbnail=_.select(photo.media$group.media$thumbnail,function(thumbnail) {
-                return (thumbnail==thumbnailTemp);
-            });
-        });
-        return response;
-    }
+var DisplayView = Backbone.View.extend({
+  el: '#display',
+  initialize: function () {
+    _.bindAll(this);
+    Backbone.Events.bind('photosDisplay', this.renderPhotos);
+  },
+  renderPhotos: function (photos) {
+    this.photos = photos;
+    $(this.el).find('.disp-photo').remove();
+    var template = _.template($('#photo-display').html());
+    var frag = document.createDocumentFragment();
+    _(photos).each(function (photo) {
+      frag.appendChild($(template(photo))[0]);
+    });
+    $(this.el).append(frag);
+    return this;
+  }
 });
 
 var Album = Backbone.Model.extend({
@@ -38,10 +23,22 @@ var Album = Backbone.Model.extend({
   },
   url: function () {
     return 'http://picasaweb.google.com/data/feed/api/user/' + this.get('userId') + '/albumid/' + this.get('id') + '?alt=json&thumbsize=' + this.get('thumbsize');
+  },
+  parse: function (body) {
+    var photos = [];
+    _(body.feed.entry).each(function (photo) {
+      photos.push({
+        url: photo.media$group.media$thumbnail[0].url
+      });
+    });
+    return {
+      photos: photos
+    }
   }
 });
 
-var UserAlbums = Backbone.Collection.extend({
+var Albums = Backbone.Collection.extend({
+  model: Album,
   initialize: function () {
     _.bindAll(this);
   },
@@ -67,12 +64,23 @@ var UserAlbums = Backbone.Collection.extend({
 
 var AlbumView = Backbone.View.extend({
   tagName: 'li',
+  events: {
+    'click img': 'fetchAlbum'
+  },
   initialize: function () {
     _.bindAll(this);
   },
   render: function (template) {
     $(this.el).html(template(this.model.toJSON()));
     return this;
+  },
+  fetchAlbum: function () {
+    this.model.fetch({
+      success: this.showAlbum
+    });
+  },
+  showAlbum: function () {
+    Backbone.Events.trigger('photosDisplay', this.model.get('photos'));
   }
 });
 
@@ -82,7 +90,7 @@ var AlbumSliderView = Backbone.View.extend({
     _.bindAll(this);
   },
   fetchForUser: function(userId) {
-    this.collection = new UserAlbums();
+    this.collection = new Albums();
     this.collection.setUserId(userId);
     this.collection.fetch({
       success: this.renderAlbums
@@ -105,8 +113,10 @@ var AlbumSliderView = Backbone.View.extend({
 
 
 $(document).ready(function () {
+  var displayView = new DisplayView();
   var albumSliderView = new AlbumSliderView();
   albumSliderView.fetchForUser('116342059677336243524');
+
 
 
 });
