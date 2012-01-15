@@ -23,7 +23,7 @@ class SupplierAdmin(admin.ModelAdmin):
   fieldsets = (
     (None, {
         'classes': ('',),
-        'fields': ('title', 'title_slug','category',)
+        'fields': ('title', 'title_slug','website','category',)
     }),
     ('Other', {
         'classes': ('',),
