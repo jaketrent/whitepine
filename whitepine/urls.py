@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', direct_to_template, {'template': 'index.html'}, name="index"),
     url(r'^portfolio/$', direct_to_template, {'template': 'portfolio.html'}, name="portfolio"),
-    url(r'^services/$', direct_to_template, {'template': 'services.html'}, name="services"),
+    url(r'^suppliers/$', include('supplier.urls')),
     url(r'^about/$', direct_to_template, {'template': 'about.html'}, name="about"),
     url(r'^contact/$', direct_to_template, {'template': 'contact.html'}, name="contact"),
     url(r'^policies/$', direct_to_template, {'template': 'policies.html'}, name="policies"),
