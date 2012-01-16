@@ -215,18 +215,18 @@ footer ul li {
 
 
 /*** suppliers ***/
-.service-menu {
+.supplier-menu {
   position: absolute;
   right: 20px;
   top: 160px;
   list-style: none;
 }
-.service-menu li {
+.supplier-menu li {
   display: block;
   line-height: 30px;
   text-transform: uppercase;
 }
-.service-menu li a {
+.supplier-menu li a {
   font-size: 14px;
   text-align: right;
   display: block;
@@ -234,9 +234,14 @@ footer ul li {
   text-decoration: none;
   padding-left: 15px;
 }
-.service-menu li a:hover:before {
+.supplier-menu li a:hover:before {
   content: "\2192\00a0";
 }
-.service {
+.supplier {
   display: none;
+  margin-top: 10px;
+}
+.supplier a:hover {
+  color: #faf8ba;
+  text-decoration: underline;
 }
