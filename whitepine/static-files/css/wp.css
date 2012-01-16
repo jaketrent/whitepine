@@ -245,3 +245,14 @@ footer ul li {
   color: #faf8ba;
   text-decoration: underline;
 }
+
+/*** contact ***/
+.contact-opts a {
+  display: block;
+  padding: 20px 30px;
+  background: #4a111a;
+  font-size: 18px;
+}
+.contact-opts a:hover {
+  text-decoration: underline;
+}
