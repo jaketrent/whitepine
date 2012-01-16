@@ -19,6 +19,13 @@
 
   <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/underscore-min.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/backbone-min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/modernizr.custom.19214.js"></script>
+  <script>
+    Modernizr.load({
+      test: window.JSON,
+      nope: '{{ STATIC_URL }}js/vendor/json2.js'
+    });
+  </script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/portfolio.js"></script>
 {% endblock %}
 
