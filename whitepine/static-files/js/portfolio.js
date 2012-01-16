@@ -51,7 +51,7 @@ var Album = Backbone.Model.extend({
     thumbsize: '1024'
   },
   url: function () {
-    return 'http://picasaweb.google.com/data/feed/api/user/' + this.get('userId') + '/albumid/' + this.get('id') + '?alt=json&thumbsize=' + this.get('thumbsize');
+    return 'http://picasaweb.google.com/data/feed/api/user/' + this.get('userId') + '/albumid/' + this.get('id') + '?alt=json&thumbsize=' + this.get('thumbsize') + '&callback=?';
   },
   parse: function (body) {
     var photos = [];
@@ -75,7 +75,7 @@ var Albums = Backbone.Collection.extend({
     this.userId = userId;
   },
   url: function () {
-    return 'http://picasaweb.google.com/data/feed/api/user/' + this.userId + '?alt=json';
+    return 'http://picasaweb.google.com/data/feed/api/user/' + this.userId + '?alt=json&callback=?';
   },
   parse: function (body) {
     var self = this;
