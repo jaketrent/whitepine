@@ -140,6 +140,7 @@ var AlbumSliderView = Backbone.View.extend({
       frag.appendChild(albumView.render(liTemplate).el);
     });
     $(this.el).html(frag);
+    $('#albums').find('img').eq(0).click();
   },
   hideAlbums: function () {
     $(this.el).animate({
