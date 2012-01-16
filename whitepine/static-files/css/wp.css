@@ -195,10 +195,10 @@ footer ul li {
   background: rgba(0, 0, 0, .6) url(../img/albums.png) no-repeat center center;
   overflow: hidden;
   text-indent: -999em;
-  display: block;
+  cursor: pointer;
 }
 .arrow {
-  display: block;
+  cursor: pointer;
   height: 50px;
   width: 60px;
   position: absolute;
