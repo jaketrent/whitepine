@@ -83,10 +83,10 @@ nav ul li a.active {
 }
 header hgroup {
   margin-top: 470px;
-  padding-top: 86px;
-  height: 0px;
+  height: 86px;
   overflow: hidden;
   background: url(../img/title.png) no-repeat center;
+  text-indent: -999em;
 }
 .ribbon.small header hgroup {
   margin-top: 32px;
@@ -119,7 +119,7 @@ footer ul li {
 /*** content ***/
 .content hgroup {
   margin-top: 35px;
-  padding-top: 29px;
+  height: 29px;
   background: url(../img/title-content.png) no-repeat center;
 }
 .overlay {
