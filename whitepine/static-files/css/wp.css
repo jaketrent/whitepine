@@ -150,6 +150,7 @@ footer ul li {
   position: absolute;
   bottom: 0;
   left: 0;
+  background: rgb(0,0,0);
   background: rgba(0, 0, 0, .6);
   display: block;
   width: 100%;
@@ -190,6 +191,7 @@ footer ul li {
   position: absolute;
   bottom: 0;
   right: 0;
+  background: rgb(0, 0, 0) url(../img/albums.png) no-repeat center center;
   background: rgba(0, 0, 0, .6) url(../img/albums.png) no-repeat center center;
   overflow: hidden;
   text-indent: -999em;
@@ -205,10 +207,12 @@ footer ul li {
   text-indent: -999em;
 }
 .arrow.left {
+  background: rgb(0,0,0) url(../img/left.png) no-repeat center center;
   background: rgba(0, 0, 0, .6) url(../img/left.png) no-repeat center center;
   left: 0;
 }
 .arrow.right {
+  background: rgb(0,0,0) url(../img/right.png) no-repeat center center;
   background: rgba(0, 0, 0, .6) url(../img/right.png) no-repeat center center;
   right: 0;
 }
