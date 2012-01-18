@@ -30,12 +30,12 @@
 {% endblock %}
 
 {% block canvas %}
-  <div id="display">
+  <div id="display" role="navigation">
     <a href="#" class="arrow left">Back</a>
     <a href="#" class="arrow right">Forward</a>
   </div>
   {% block galleries %}
-    <ul id="albums">
+    <ul id="albums" role="navigation">
     </ul>
     <a href="#" id="albums-tgl">Show albums</a>
   {% endblock %}

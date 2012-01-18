@@ -5,7 +5,7 @@
 {% block services_cls %}active{% endblock %}
 
 {% block ribbon-content %}
-  <ul class="supplier-menu">
+  <ul class="supplier-menu" class="navigation">
     {% for cat in categories %}
       <li><a href="#" id="{{ cat.title_slug }}">{{ cat.title }}</a></li>
     {% endfor %}
@@ -15,7 +15,7 @@
 {% block canvas %}
   <div class="overlay">
     <h2 id="cat-title">{{ first_cat.title }}</h2>
-    <ul>
+    <ul role="navigation">
       {% for supp in suppliers %}
         <li class="supplier {{ supp.category.title_slug }}"><a href="{{ supp.website }}" target="_blank">{{ supp.title }}</a></li>
       {% endfor %}

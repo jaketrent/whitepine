@@ -25,7 +25,7 @@
 <body class="{% block pg-class %}{% endblock %}">
 <div class="container">
   {% block ribbon %}
-    <div class="ribbon {% block ribbon-class %}{% endblock %}">
+    <div class="ribbon {% block ribbon-class %}{% endblock %}" role="banner">
       <header>
         <a href="{% url index %}">
           <hgroup>
@@ -37,7 +37,7 @@
       {% block ribbon-content %}{% endblock %}
     </div>
   {% endblock %}
-  <nav>
+  <nav role="navigation">
     <ul>
       <li><a href="{% url contact %}" class="{% block contact_cls %}inactive{% endblock %}">Contact</a></li>
       <li><a href="{% url about %}" class="{% block about_cls %}inactive{% endblock %}">About</a></li>
@@ -45,12 +45,12 @@
       <li><a href="{% url portfolio %}" class="{% block portfolio_cls %}inactive{% endblock %}">Portfolio</a></li>
     </ul>
   </nav>
-  <div class="canvas">
+  <div class="canvas" role="main">
     {% block canvas %}
       <img src="{{ STATIC_URL }}/img/sample.jpg" />
     {% endblock %}
   </div>
-  <footer>
+  <footer role="contentinfo">
     <p>&copy 2012 White Pine Interior Design | All Rights Reserved</p>
     <ul>
       <li><a href="{% url contact %}">Contact</a></li>
