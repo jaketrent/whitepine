@@ -10,6 +10,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', direct_to_template, {'template': 'index.html'}, name="index"),
+    url(r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/static/img/favicon.ico'}),
     url(r'^portfolio/$', direct_to_template, {'template': 'portfolio.html'}, name="portfolio"),
     url(r'^suppliers/$', include('supplier.urls')),
     url(r'^about/$', direct_to_template, {'template': 'about.html'}, name="about"),
