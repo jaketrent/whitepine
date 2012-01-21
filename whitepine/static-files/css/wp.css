@@ -260,3 +260,8 @@ footer ul li {
 .contact-opts a:hover {
   text-decoration: underline;
 }
+
+/*** about ***/
+.about .canvas {
+  background: rgb(255, 255, 255);
+}
