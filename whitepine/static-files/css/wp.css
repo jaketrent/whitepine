@@ -251,17 +251,23 @@ footer ul li {
 }
 
 /*** contact ***/
-.contact-opts a {
-  display: block;
-  padding: 20px 30px;
-  background: #4a111a;
+.contact .overlay {
+  text-align: right;
+}
+.contact .overlay p {
   font-size: 18px;
 }
-.contact-opts a:hover {
+.contact .overlay a {
   text-decoration: underline;
 }
 
 /*** about ***/
 .about .canvas {
   background: rgb(255, 255, 255);
+}
+.about .fam {
+  max-width: 100%;
+  float: right;
+  margin: 10px 0 0 10px;
+  width: 235px;
 }
