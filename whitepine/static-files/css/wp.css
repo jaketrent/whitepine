@@ -55,7 +55,7 @@ nav ul li {
   margin-left: 8px;
 }
 nav ul li:before {
-  content: " / ";
+  content: "| ";
 }
 nav ul li:last-child:before {
   content: "";
