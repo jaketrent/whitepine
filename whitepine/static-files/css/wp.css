@@ -239,6 +239,14 @@ footer ul li {
 .supplier-menu li a:hover:before {
   content: "\2192\00a0";
 }
+.suppliers {
+  -moz-column-count: 2;
+  -moz-column-gap: 15px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 15px;
+  column-count: 2;
+  column-gap: 15px;
+}
 .supplier {
   display: none;
   margin-top: 10px;

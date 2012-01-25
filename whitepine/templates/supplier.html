@@ -15,7 +15,7 @@
 {% block canvas %}
   <div class="overlay">
     <h2 id="cat-title">{{ first_cat.title }}</h2>
-    <ul role="navigation">
+    <ul role="navigation" class="suppliers">
       {% for supp in suppliers %}
         <li class="supplier {{ supp.category.title_slug }}"><a href="{{ supp.website }}" target="_blank">{{ supp.title }}</a></li>
       {% endfor %}
