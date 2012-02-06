@@ -28,7 +28,8 @@ body {
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
-  background: #fff;
+  background: #101010;
+  background: #101010 url(../img/victorianbg2.jpg) repeat-x 0 110px;
 }
 .container {
   width: 1024px;
