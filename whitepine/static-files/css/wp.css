@@ -287,6 +287,12 @@ footer ul li {
   .container {
     width: 95%;
   }
+  .canvas {
+    height: auto;
+  }
+  .overlay {
+    height: auto;
+  }
   .ribbon {
     display: none;
   }
@@ -324,7 +330,18 @@ footer ul li {
   nav {
     padding-top: 10px;
   }
+  .arrow {
+    top: 0;
+  }
+  #albums-tgl {
+    margin: 0;
+  }
   .about .fam {
     width: 185px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .canvas {
+    max-height: 450px;
   }
 }
