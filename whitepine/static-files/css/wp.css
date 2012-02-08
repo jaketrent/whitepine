@@ -322,6 +322,9 @@ footer ul li {
   .overlay .supplier-menu option {
     color: #000;
   }
+  .arrow {
+    top: 190px;
+  }
 }
 @media screen and (max-width: 479px) {
   .container {
