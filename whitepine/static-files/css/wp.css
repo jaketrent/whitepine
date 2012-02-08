@@ -293,6 +293,11 @@ footer ul li {
   .company {
     display: inherit;
   }
+  .overlay {
+    width: 84.8%; /*100-(2.9296875*2)+big tweak*/
+    height: 483px;
+    padding: 30px 2.9296875%; /*30/1024*/
+  }
   .overlay .supplier-menu {
     display: block;
     position: absolute;
@@ -312,5 +317,8 @@ footer ul li {
 @media screen and (max-width: 479px) {
   .container {
     width: 98%;
+  }
+  .about .fam {
+    width: 185px;
   }
 }
