@@ -321,6 +321,9 @@ footer ul li {
   .container {
     width: 98%;
   }
+  nav {
+    padding-top: 10px;
+  }
   .about .fam {
     width: 185px;
   }
