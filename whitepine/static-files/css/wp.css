@@ -47,19 +47,16 @@ nav {
 }
 nav ul li {
   float: right;
-  margin-left: 8px;
-}
-nav ul li:before {
-  content: "| ";
-}
-nav ul li:last-child:before {
-  content: "";
+  margin-left: 14px;
 }
 nav ul li a {
-  color: #707070;
+  color: #ffffff;
 }
 nav ul li a.active {
-  color: #4a111a;
+  color: #c42945;
+}
+.company {
+  display: none;
 }
 .ribbon {
   position: absolute;
@@ -278,4 +275,24 @@ footer ul li {
   float: right;
   margin: 10px 0 0 10px;
   width: 235px;
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    width: 95%;
+  }
+  .ribbon {
+    display: none;
+  }
+  .home {
+    display: none;
+  }
+  .company {
+    display: inherit;
+  }
+}
+@media screen and (max-width: 479px) {
+  .container {
+    width: 98%;
+  }
 }

@@ -43,7 +43,8 @@
       <li><a href="{% url about %}" class="{% block about_cls %}inactive{% endblock %}">About</a></li>
       <li><a href="{% url suppliers %}" class="{% block services_cls %}inactive{% endblock %}">Suppliers</a></li>
       <li><a href="{% url portfolio %}" class="{% block portfolio_cls %}inactive{% endblock %}">Portfolio</a></li>
-      <li><a href="{% url index %}" class="{% block index_cls %}inactive{% endblock %}">Home</a></li>
+      <li><a href="{% url index %}" class="{% block index_cls %}inactive{% endblock %} home">Home</a></li>
+      <li><a href="{% url index %}" class="{% block company_index_cls %}inactive{% endblock %} company">White Pine Design</a></li>
     </ul>
   </nav>
   <div class="canvas" role="main">
