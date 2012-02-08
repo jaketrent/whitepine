@@ -238,6 +238,9 @@ footer ul li {
 .supplier-menu li a:hover:before {
   content: "\2192\00a0";
 }
+.overlay .supplier-menu {
+  display: none;
+}
 .suppliers {
   -moz-column-count: 2;
   -moz-column-gap: 15px;
@@ -289,6 +292,19 @@ footer ul li {
   }
   .company {
     display: inherit;
+  }
+  .overlay .supplier-menu {
+    display: block;
+    position: absolute;
+    top: 49px;
+    right: 15px;
+    height: 24px;
+    font-size: 14px;
+    background: #707070;
+    color: white;
+  }
+  .overlay .supplier-menu option {
+    color: #000;
   }
 }
 @media screen and (max-width: 479px) {
