@@ -32,7 +32,8 @@ body {
   background: #101010 url(../img/victorianbg2.jpg) repeat-x 0 110px;
 }
 .container {
-  width: 1024px;
+  width: 90%;
+  max-width: 1024px;
   margin: 0 auto;
   position: relative;
 }
@@ -63,7 +64,7 @@ nav ul li a.active {
 .ribbon {
   position: absolute;
   top: -5px;
-  left: 70px;
+  left: 6.8359375%; /*70/1024*/
   width: 230px;
   height: 670px;
   z-index: 1;
@@ -124,13 +125,13 @@ footer ul li {
 .overlay {
   position: absolute;
   top: 50px;
-  right: 50px;
-  width: 552px;
+  right: 4.8828125%; /*50/1024*/
+  width: 53.90625%; /*552/1024*/
   height: 483px;
   background: rgb(0,0,0);
   background: rgba(0,0,0,.6);
   display: block;
-  padding: 30px;
+  padding: 30px 2.9296875%; /*30/1024*/
   font-size: 14px;
   overflow-x: hidden;
   overflow-y: auto;
