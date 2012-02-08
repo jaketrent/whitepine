@@ -298,10 +298,12 @@ footer ul li {
     position: absolute;
     top: 49px;
     right: 15px;
-    height: 24px;
     font-size: 14px;
+  }
+  .overlay .supplier-menu select {
     background: #707070;
     color: white;
+    height: 24px;
   }
   .overlay .supplier-menu option {
     color: #000;

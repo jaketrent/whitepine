@@ -15,11 +15,14 @@
 {% block canvas %}
   <div class="overlay">
     <h2 id="cat-title">{{ first_cat.title }}</h2>
-    <select class="supplier-menu" class="navigation">
-      {% for cat in categories %}
-        <option value="{{ cat.title_slug }}">{{ cat.title }}</option>
-      {% endfor %}
-    </select>
+    <div class="supplier-menu">
+      More categories:
+      <select class="navigation">
+        {% for cat in categories %}
+          <option value="{{ cat.title_slug }}">{{ cat.title }}</option>
+        {% endfor %}
+      </select>
+    </div>
     <ul role="navigation" class="suppliers">
       {% for supp in suppliers %}
         <li class="supplier {{ supp.category.title_slug }}"><a href="{{ supp.website }}" target="_blank">{{ supp.title }}</a></li>
