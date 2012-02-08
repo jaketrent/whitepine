@@ -36,13 +36,21 @@
   {{ block.super }}
   <script type="text/javascript">
     $(function () {
-      $('.supplier-menu a').bind('click', function () {
+      function selectCat($selected, catId) {
         $('.supplier').hide();
-        var catId = $(this).attr('id');
         $('.supplier.' + catId).show();
-        $('#cat-title').html($(this).html());
+        $('#cat-title').html($selected.html());
         return false;
+      }
+      $('.supplier-menu a').bind('click', function () {
+        var catId = $(this).attr('id');
+        selectCat($(this), catId);
+        $('.overlay .supplier-menu select option[value=' + catId + ']').attr('selected', 'selected');
       }).first().trigger('click');
+      $('.overlay .supplier-menu select').bind('change', function () {
+        var $option = $(this).children("option:selected");
+        selectCat($option, $option.val());
+      });
     });
   </script>
 {% endblock %}
