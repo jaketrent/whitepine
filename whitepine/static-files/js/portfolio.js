@@ -20,6 +20,8 @@ var DisplayView = Backbone.View.extend({
       frag.appendChild($(template(photo))[0]);
     });
     $(this.el).append(frag);
+    $(this.el).find('.disp-photo').hide();
+    this.showPhoto();
     return this;
   },
   showPhoto: function () {
