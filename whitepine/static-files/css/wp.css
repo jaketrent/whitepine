@@ -323,7 +323,7 @@ footer ul li {
     color: #000;
   }
   .arrow {
-    top: 190px;
+    top: 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -332,9 +332,6 @@ footer ul li {
   }
   nav {
     padding-top: 10px;
-  }
-  .arrow {
-    top: 0;
   }
   #albums-tgl {
     margin: 0;
@@ -345,6 +342,6 @@ footer ul li {
 }
 @media screen and (max-width: 320px) {
   .canvas {
-    max-height: 420px;
+    max-height: 440px;
   }
 }
