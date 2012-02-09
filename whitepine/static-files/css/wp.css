@@ -345,6 +345,6 @@ footer ul li {
 }
 @media screen and (max-width: 320px) {
   .canvas {
-    max-height: 450px;
+    max-height: 420px;
   }
 }
