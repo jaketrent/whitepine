@@ -326,7 +326,7 @@ footer ul li {
     top: 190px;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
   .container {
     width: 98%;
   }
