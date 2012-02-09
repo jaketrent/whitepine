@@ -30,12 +30,17 @@ var DisplayView = Backbone.View.extend({
     $photos.eq(this.index).show();
   },
   left: function () {
+    this.scrollDisplayViewTop();
     this.moveIndex(-1);
     this.showPhoto();
   },
   right: function () {
+    this.scrollDisplayViewTop();
     this.moveIndex(1);
     this.showPhoto();
+  },
+  scrollDisplayViewTop: function () {
+    window.scrollTo(0, $(this.el).offset().top);
   },
   moveIndex: function (move) {
     if (this.index + move == this.photos.length) {
