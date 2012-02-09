@@ -16,7 +16,7 @@
   <div class="overlay">
     <h2 id="cat-title">{{ first_cat.title }}</h2>
     <div class="supplier-menu">
-      More categories:
+      <span class="desc">More categories:</span>
       <select class="navigation">
         {% for cat in categories %}
           <option value="{{ cat.title_slug }}">{{ cat.title }}</option>
