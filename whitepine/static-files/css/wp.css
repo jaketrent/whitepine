@@ -270,9 +270,6 @@ footer ul li {
 }
 
 /*** about ***/
-.about .canvas {
-  background: rgb(255, 255, 255);
-}
 .about .fam {
   max-width: 100%;
   float: right;
@@ -318,7 +315,7 @@ footer ul li {
   .overlay .supplier-menu {
     display: block;
     position: absolute;
-    top: 49px;
+    top: 29px;
     right: 15px;
     font-size: 14px;
   }
@@ -353,6 +350,11 @@ footer ul li {
     top: 10px;
     width: 90%; /*arbitrary*/
     right: 2.5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .bg-img {
+    /*display: none;*/
   }
   #albums-tgl {
     margin: 0;
@@ -365,7 +367,10 @@ footer ul li {
   .overlay .supplier-menu .desc {
     display: none;
   }
-  .canvas {
+  /*.canvas {
     max-height: 440px;
+  }*/
+  .about .fam {
+    width: 100%;
   }
 }
