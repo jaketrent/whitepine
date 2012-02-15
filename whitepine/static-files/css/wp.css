@@ -347,14 +347,20 @@ footer ul li {
     margin: 4px 0 0 8px;
   }
   .overlay {
-    top: 10px;
-    width: 90%; /*arbitrary*/
-    right: 2.5%;
+    position: inherit;
+    top: auto;
+    right: auto;
+    height: auto;
+    margin: 15px 2.5%;
     padding-top: 10px;
     padding-bottom: 10px;
+    min-height: 350px;
   }
   .bg-img {
-    /*display: none;*/
+    display: none;
+  }
+  .index .bg-img {
+    display: block;
   }
   #albums-tgl {
     margin: 0;
