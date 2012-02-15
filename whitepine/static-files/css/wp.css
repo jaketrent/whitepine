@@ -315,7 +315,7 @@ footer ul li {
   .overlay .supplier-menu {
     display: block;
     position: absolute;
-    top: 29px;
+    top: 49px;
     right: 15px;
     font-size: 14px;
   }
@@ -355,6 +355,9 @@ footer ul li {
     padding-top: 10px;
     padding-bottom: 10px;
     min-height: 350px;
+  }
+  .overlay .supplier-menu {
+    top: 29px;
   }
   .bg-img {
     display: none;
