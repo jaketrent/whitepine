@@ -302,6 +302,14 @@ footer ul li {
   .company {
     display: inherit;
   }
+  .company a {
+    display: block;
+    width: 183px;
+    height: 15px;
+    text-indent: -999em;
+    overflow: hidden;
+    background: url(../img/title-horz.png) no-repeat center;
+  }
   .overlay {
     width: 84.8%; /*100-(2.9296875*2)+big tweak*/
     height: 483px;
@@ -326,12 +334,25 @@ footer ul li {
     top: 0;
   }
 }
+@media screen and (max-width: 570px) {
+  .company {
+    float: none;
+  }
+}
 @media screen and (max-width: 480px) {
   .container {
     width: 98%;
   }
   nav {
     padding-top: 10px;
+  }
+  nav ul li {
+    margin: 4px 0 0 8px;
+  }
+  .overlay {
+    top: 10px;
+    width: 90%; /*arbitrary*/
+    right: 2.5%;
   }
   #albums-tgl {
     margin: 0;
