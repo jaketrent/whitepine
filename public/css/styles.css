@@ -48,6 +48,13 @@ h1 {
   box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.25), 1rem 0 2rem rgba(0, 0, 0, 0.25),
     0 1rem 2rem rgba(0, 0, 0, 0.25), -1rem 0 2rem rgba(0, 0, 0, 0.25);
   background: #e0e0dd;
+  border: 1vw solid transparent;
+  transition: transform 400ms, border-color 600ms;
+}
+.contact:hover,
+.contact:focus-within {
+  border-color: #fdd551;
+  transform: perspective(8cm) rotateX(2deg) rotateZ(-3deg);
 }
 .contact h1 {
   margin-bottom: 2rem;
