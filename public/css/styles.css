@@ -51,10 +51,12 @@ h1 {
   border: 1vw solid transparent;
   transition: transform 400ms, border-color 600ms;
 }
-.contact:hover,
-.contact:focus-within {
-  border-color: #fdd551;
-  transform: perspective(8cm) rotateX(2deg) rotateZ(-3deg);
+@media (hover: hover) {
+  .contact:hover,
+  .contact:focus-within {
+    border-color: #fdd551;
+    transform: perspective(8cm) rotateX(2deg) rotateZ(-3deg);
+  }
 }
 .contact h1 {
   margin-bottom: 2rem;
