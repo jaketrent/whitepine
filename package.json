@@ -1,0 +1,7 @@
+{
+  "name": "whitepine",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx http-server public"
+  }
+}
