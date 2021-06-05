@@ -1,1 +1,0 @@
-web: python whitepine/manage.py collectstatic --noinput; bin/gunicorn_django --workers=3 --bind=0.0.0.0:$PORT whitepine/settings.py
